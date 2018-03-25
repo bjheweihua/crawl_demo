@@ -15,7 +15,6 @@ def get(html):
     items = re.findall(reg,html)
     return items
 
-get(get_content(1))
 
 ##多页处理，下载到文件
 #for  j in range(1,10):
@@ -44,6 +43,7 @@ for colnum in range(0, 5):
 
 for each in range(1,100): #请求100页数据
     index = (each-1)*50+1 #每页50条数据
+    print index
     excel_write(get(get_content(each)),index)
 wb.save(newTable)
 
