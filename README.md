@@ -5,11 +5,12 @@
 ## 爬取前程无忧招聘信息并写入excel
 
 
-### 1.进入到前程无忧的官网，输入关键字“Python”，我们会得到下面的页面:
+#### 1.进入到前程无忧的官网，输入关键字“Python”，我们会得到下面的页面:
 ![](https://github.com/bjheweihua/crawl_demo/blob/master/51job/51j0b_1.png)  
 
-### 2.罗列相关信息"职位名"、"公司名"、"工作地点"、"薪资"、"发布时间"。把这些信息爬取下来！审查元素找到我们所需信息所在的标签，再写一个正则表达式把元素筛选出来就可以了！
-![](https://github.com/bjheweihua/crawl_demo/blob/master/51job/51j0b_2.png)  
+#### 2.罗列相关信息"职位名"、"公司名"、"工作地点"、"薪资"、"发布时间"。
+#### 把这些信息爬取下来！审查元素找到我们所需信息所在的标签，再写一个正则表达式把元素筛选出来就可以了！
+![](https://github.com/bjheweihua/crawl_demo/blob/master/51job/51job_2.png)  
 
 顺理成章得到这样一个正则表达式：
 ```
@@ -17,7 +18,7 @@ reg = re.compile(r'class="t1 ">.*? <a target="_blank" title="(.*?)".*? <span cla
 ```
 
 
-### 3.代码实现：
+#### 3.代码实现：
 ```
 # -*- coding:utf-8 -*-
 import urllib
